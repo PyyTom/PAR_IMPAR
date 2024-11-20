@@ -5,11 +5,11 @@ def par_impar(numero):
     else:
         print(str(numero) + ' es IMPAR.\nLos numeros impares desde ' +str(numero) + ' hasta 1 son:')
         for n in range(numero, 0, -2): print(n)
-def check():
+def leer_numero():
     try:
         numero=int(input('Ingresar un numero entero: '))
         par_impar(numero)
     except ValueError:
         print('No es un numero entero.')
-        check()
-check()
+        leer_numero()
+leer_numero()
